@@ -42,4 +42,32 @@ public class Baraja {
 		}
 	}
 	
+	public static void baraja(){
+		
+	}
+	
+	public static void getCarta(){
+		//Comprobamos que no este vacia la baraja
+		if (baraja.empty()){
+			baraja.pop().mostrar();
+		}	else	{
+			System.out.println("La baraja esta vacia, baraja de nuevo primero");
+		}
+	}
+	
+	public static boolean confirma(String mensaje){
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Estas seguro de que quieres " + mensaje);
+		System.out.println("1. Si, quiero " + mensaje);
+		System.out.println("2. No, no quiero " + mensaje);
+		int seguro = entrada.nextInt();
+		if (seguro == 1){
+			return true;
+		}	else	{
+			System.out.println("Cancelado");
+		}
+		return false;		
+	}
+	
 }
