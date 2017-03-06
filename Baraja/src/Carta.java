@@ -1,4 +1,20 @@
 
 public class Carta {
 
+	//Variables
+	int numero;
+	String palo;
+	estetica ds = new estetica();
+	
+	public Carta(int n, String p){
+		numero = n;
+		palo = p;
+	}
+	
+	public void mostrar(){
+		ds.limpiarlnSM("#",30);
+		System.out.println("Carta Numero: " + numero);
+		System.out.println("Palo: " + palo);
+		ds.limpiarlnSM("#",30);
+	}
 }
