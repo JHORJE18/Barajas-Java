@@ -43,7 +43,45 @@ public class Baraja {
 	}
 	
 	public static void baraja(){
+		Scanner entrada = new Scanner(System.in);
 		
+		System.out.println("De cuantas cartas quieres barajar");
+		int numCartas = entrada.nextInt();
+		
+		if (baraja.empty()){
+			//Comienza a añadir cartas
+			for (int i=0; i<numCartas; i++){
+				nuevaCarta();
+			}
+		}	else	{
+			
+		}
+	}
+	
+	public static void nuevaCarta(){
+		//Obtenemos numeros aleatorios
+		int numC = 1;
+		int paloI = 3;
+		String paloC = null;
+		
+		//Convertimos palo en String
+		switch (paloI){
+		case 1:
+			paloC = "Oro";
+			break;
+		case 2:
+			paloC = "Copa";
+			break;
+		case 3:
+			paloC = "Espada";
+			break;
+		case 4:
+			paloC = "Basto";
+			break;
+		}
+		
+		//Generamos la nueva carta en la baraja
+		baraja.push(new Carta(numC,paloC));
 	}
 	
 	public static void getCarta(){
