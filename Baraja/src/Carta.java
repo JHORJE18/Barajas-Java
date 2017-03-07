@@ -12,9 +12,9 @@ public class Carta {
 	}
 	
 	public void mostrar(){
-		ds.limpiarlnSM("#",30);
-		System.out.println("Carta Numero: " + numero);
+		ds.limpiarlnSM("#",25);
+		System.out.println("Numero: " + numero);
 		System.out.println("Palo: " + palo);
-		ds.limpiarlnSM("#",30);
+		ds.limpiarlnSM("#",25);
 	}
 }

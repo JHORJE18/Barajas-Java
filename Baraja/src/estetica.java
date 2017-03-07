@@ -3,6 +3,7 @@ public class estetica {
 	
 	//variables
 	String titulo = "Baraja Española";
+	String autor = "Jorge Lopez Gil";
 
 	public void limpiarln(int num){
 		for (int i=0; i<num; i++){
@@ -25,12 +26,22 @@ public class estetica {
 	}
 	
 	public void titulo(){
-		limpiarln(30);
+		limpiarln(25);
 		
-		limpiar(7);
+		limpiar(5);
 		System.out.print(titulo);
-		limpiarln(7);
+		limpiarln(5);
 		
-		limpiarln(30);
+		limpiarln(25);
+	}
+	
+	public void credito(){
+		limpiarln(25);
+		
+		limpiar(5);
+		System.out.print(autor);
+		limpiarln(5);
+		
+		limpiarln(25);
 	}
 }

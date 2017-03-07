@@ -11,6 +11,7 @@ public class Baraja {
 		ds.titulo();
 		menu();
 		System.out.println("Programa finalizado correctamente");
+		ds.credito();
 	}
 	
 	public static void menu(){
@@ -39,6 +40,7 @@ public class Baraja {
 			default:
 				System.out.println("La opcion escogida no es valida");
 			}
+			ds.limpiarln(25);
 		}
 	}
 	
@@ -54,14 +56,18 @@ public class Baraja {
 				nuevaCarta();
 			}
 		}	else	{
-			
+			baraja.clear();
+			for (int i=0; i<numCartas; i++){
+				nuevaCarta();
+			}
 		}
+		System.out.println("Se han barajeado " + baraja.size() + " cartas");
 	}
 	
 	public static void nuevaCarta(){
 		//Obtenemos numeros aleatorios
-		int numC = 1;
-		int paloI = 3;
+		int numC = random(1,10);
+		int paloI = random(1,4);
 		String paloC = null;
 		
 		//Convertimos palo en String
@@ -83,14 +89,24 @@ public class Baraja {
 		//Generamos la nueva carta en la baraja
 		baraja.push(new Carta(numC,paloC));
 	}
+
+	public static int random(int min, int max){
+		//Genera un numero aleatorio
+		int num = (int) (Math.random()*max+min);
+		return num;
+	}
 	
 	public static void getCarta(){
 		//Comprobamos que no este vacia la baraja
+		ds.limpiarln(25);
+	
 		if (baraja.empty()){
-			baraja.pop().mostrar();
-		}	else	{
 			System.out.println("La baraja esta vacia, baraja de nuevo primero");
+		}	else	{
+			baraja.pop().mostrar();
 		}
+		
+		System.out.println("Te quedan " + baraja.size() + " cartas en la baraja");
 	}
 	
 	public static boolean confirma(String mensaje){
