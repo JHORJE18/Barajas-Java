@@ -1,4 +1,4 @@
-# Baraja Java
+# Barajas Java
 Programa en Java para barajar cartas y ver cual es la carta de arriba.
 <br>Los objetos `Carta` se alamcenan en un `Stack` facilitando la tarea de añadir cartas al final y ir quitando una a una
 
