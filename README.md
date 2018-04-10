@@ -37,6 +37,28 @@ Programa en Java para barajar cartas y ver cual es la carta de arriba.
   }
 
 ```
+> Objeto Carta
+```java
+public class Carta {
+
+	//Variables
+	int numero;
+	String palo;
+	estetica ds = new estetica();
+
+	public Carta(int n, String p){
+		numero = n;
+		palo = p;
+	}
+	
+	public void mostrar(){
+		ds.limpiarlnSM("#",25);
+		System.out.println("Numero: " + numero);
+		System.out.println("Palo: " + palo);
+		ds.limpiarlnSM("#",25);
+	}
+}
+```
 
 ## Ejemplo
 ```
